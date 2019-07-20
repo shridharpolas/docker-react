@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -t spolas/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run spolas/docker-react npm run test -- --coverage
